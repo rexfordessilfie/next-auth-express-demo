@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import { nextAuthRouter, usersRouter } from "./routes";
 import { authOptions } from "./config";
 import { errorMiddleware } from "./middleware";
+import morgan from "morgan";
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(express.json());
 
 // Parses request cookies into the `req.cookie` property
 app.use(cookieParser());
+
+app.use(morgan("dev"));
 
 // Using the `nextAuthRouter` at the provided `basePath`
 app.use(
