@@ -38,7 +38,7 @@ export function nextAuthRouter(options: {
     // slug provided by Next.js in file-based routing for [...nextauth].ts file.
     req.query.nextauth = parsePathSegments(basePath, req.originalUrl);
 
-    NextAuth(
+    await NextAuth(
       req,
       res,
       typeof authOptions === "function" ? authOptions(req) : authOptions
