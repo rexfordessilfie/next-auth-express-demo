@@ -1,0 +1,35 @@
+{
+  "name": "next-auth-express-demo",
+  "version": "1.0.0",
+  "description": "Using NextAuth in an Express Backend",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexfordessilfie/next-auth-express-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexfordessilfie/next-auth-express-demo/issues"
+  },
+  "homepage": "https://github.com/rexfordessilfie/next-auth-express-demo#readme",
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.3",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "next-auth": "^4.22.1"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/node": "^20.4.1",
+    "concurrently": "^8.2.0",
+    "typescript": "^5.1.6"
+  }
+}
