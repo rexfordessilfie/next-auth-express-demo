@@ -2,6 +2,7 @@ import express, { Response } from "express";
 import cookieParser from "cookie-parser";
 import { nextAuthRouter, usersRouter } from "./routes";
 import { authOptions } from "./config";
+import { errorMiddleware } from "./middleware";
 
 const app = express();
 
@@ -35,5 +36,7 @@ app.use("/", (_req, res: Response) => {
 `
   );
 });
+
+app.use(errorMiddleware);
 
 export { app };
